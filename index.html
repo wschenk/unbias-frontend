@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unbias Articles</title>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Unbiased</h1>
+        <div id="profileContainer">
+          <button class="sign-in bg-blue-500 text-white px-4 py-2 rounded">
+            Login
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="app" class="container mx-auto p-4">
+      <div class="app-container hidden">
+        <div class="flex flex-col gap-4 max-w-2xl mx-auto">
+          <sl-input
+            id="url-input"
+            label="Url to look at"
+            help-text="Give us a url and we'll pull it down and look at it"
+          ></sl-input>
+          <!--
+          <div class="text-center text-gray-500">...or...</div>
+          <sl-textarea
+            id="document-input"
+            label="Article Text"
+            help-text="Just copy and paste the text of the article"
+          >
+          </sl-textarea>
+          -->
+        </div>
+      </div>
+    </div>
+
+    <div id="results" class="container mx-auto p-4 max-w-2xl"></div>
+
+    <div id="splash-screen" class="container mx-auto p-4">
+      <div class="text-center">
+        <h1>Unbiased</h1>
+        <p>Your AI-powered content analysis tool</p>
+        <button class="sign-in bg-blue-500 text-white px-4 py-2 rounded">
+          Login
+        </button>
+      </div>
+    </div>
+
+    <div class="container mx-auto p-4 max-w-2xl mx-auto">
+      <article-list></article-list>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
