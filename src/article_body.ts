@@ -11,7 +11,9 @@ class ArticleBody extends HTMLElement {
     }
 
     if (summary != "null") {
-      this.innerHTML += `<zero-md><script type="text/markdown">${summary}</script></zero-md>`;
+      this.innerHTML += `<zero-md class="border-solid border-2 border-indigo-600 p-4 rounded-md bg-white">
+      <script type="text/markdown">${summary}</script>
+      </zero-md>`;
     }
     this.innerHTML += `<p class="text-sm text-gray-500 pb-8"><a href="${url}" target="_blank">${url}</a></p>`;
   }
