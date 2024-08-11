@@ -5,6 +5,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 class ArticleList extends HTMLElement {
   async connectedCallback() {
+    this.innerHTML = "<sl-progress-bar indeterminate></sl-progress-bar>";
     await clerk.load();
     console.log("postArticle start");
     const token = await clerk.session?.getToken();
@@ -16,6 +17,8 @@ class ArticleList extends HTMLElement {
     });
 
     const data = await response.json();
+
+    this.innerHTML = "";
 
     data.forEach((article: any) => {
       const articleElement = document.createElement("article-body");

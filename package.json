@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "surge dist verdant-teaching.surge.sh"
+    "deploy": "tsc && vite build && surge dist verdant-teaching.surge.sh"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
